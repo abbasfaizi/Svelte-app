@@ -3,6 +3,7 @@
     import Button from "../common/Button.svelte";
     import BookGrid from "./BookGrid.svelte";
     import { httpGet } from '../common/api';
+   // export let onBookSelect;
 
     let books = [];
   onMount(async function() {
@@ -49,4 +50,4 @@ header {
 </p>
 
 <Button>+ Add BOOK</Button>
-<BookGrid books={books}/>
+<BookGrid books={books} on:book-select />

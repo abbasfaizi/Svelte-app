@@ -1,13 +1,30 @@
 <script>
-	export let name;
+	
 	import Library from "./Library/library.svelte";
+	import Detail from "./detail/Detail.svelte";
+
+	let page = 'library';
+	let pageArgs = {};
+	function handleBookSelect(event){
+		page = 'detail';
+		pageArgs = event.detail;
+	}
 
 </script>
 
 <main>
-<Library/>
+<!-- <Library on:book-select={handleBookSelect}/> -->
+
+{#if page === 'detail'}
+	<Detail />
+	{:else}
+	<Library on:book-select={handleBookSelect}/>
+	{/if}
+
 </main>
-
+	
 <style>
-
+main {
+		padding: var(--spacingLarge);
+	}
 </style>
