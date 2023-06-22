@@ -3,6 +3,7 @@
     import Button from "../common/Button.svelte";
     import BookGrid from "./BookGrid.svelte";
     import { httpGet } from '../common/api';
+    
    // export let onBookSelect;
 
     let books = [];
@@ -49,5 +50,5 @@ header {
 
 </p>
 
-<Button>+ Add BOOK</Button>
-<BookGrid books={books} on:book-select />
+<Button to="/create">+ Add BOOK</Button>
+<BookGrid books={books} />
