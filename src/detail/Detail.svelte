@@ -17,6 +17,7 @@
     });
   
     async function handleFavoriteClick() {
+        console.log('heloo');
       const toggledBook = {
         ...book,
         favorite: !book.favorite
