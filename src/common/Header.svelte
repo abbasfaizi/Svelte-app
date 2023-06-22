@@ -17,6 +17,7 @@
       font-size: var(--typeSizeLarge);
       margin-bottom: var(--spacingLarge);
     }
+    
   </style>
   
   {#if element === 'h1'}
